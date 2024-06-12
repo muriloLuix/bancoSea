@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/index.js" type="module" defer></script>
     <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
     <title> | Banco Sea</title>
 </head>
@@ -12,30 +13,35 @@
 <body>
     <header>
         <div class="container">
-            <div class="hamburguer-menu" onclick="toggle(this)">
+            <div class="hamburguer-menu">
                 <span class="line first-line"></span>
                 <span class="line second-line"></span>
             </div>
             <div class="menu-expanded">
                 <ul>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Início </a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Cadastro</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    <main>
 
+    <main>
+        <section class="greenBg">
+            <div class="texts">
+                <h1>SEJA BEM VINDO AO BANCO SEA</h1>
+                <p>Venha navegar por esse mundo de emoções!</p>
+            </div>
+            <div class="imgPessoa">
+                <img src="assets/img/mulherOlhandoPraTela.png" alt="Foto Mulher">
+            </div>
+        </section>
     </main>
     <footer>
 
     </footer>
-    <script>
-        function toggle(element) {
-            element.classList.toggle("change");
-        }
-    </script>
 </body>
 
 </html>
