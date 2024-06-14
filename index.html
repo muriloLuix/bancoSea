@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/index.js" type="module" defer></script>
+    <script src="assets/js/switchTheme.js" defer></script>
     <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
     <title> | Banco Sea</title>
 </head>
 
-<body>
+<body class="bodyWhite">
     <header>
         <div class="container">
             <div class="hamburguer-menu">
@@ -26,13 +27,13 @@
                 </ul>
             </div>
         </div>
-        <div class="toggle-switch">
+        <div class="toggle-switch" onclick="switchTheme()">
             <input type="checkbox" id="colorToggle" class="toggle-input">
             <label for="colorToggle" class="toggle-label">
                 <span class="toggle-ball"></span>
             </label>
         </div>
-        
+
     </header>
 
     <main>
