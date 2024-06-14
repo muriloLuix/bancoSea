@@ -6,13 +6,15 @@ function switchTheme() {
     const menuLinks = document.querySelectorAll('.menu-link');
     const conteudo = document.querySelector('.conteudo')
     const toggleSwitch = document.querySelector('.toggle-switch');
+    const main = document.querySelector('.main')
 
     toggleSwitch.addEventListener('click', () => {
         body.classList.toggle('bodyDark');
         body.classList.toggle('bodyWhite');
         greenBg.classList.toggle('greenBgDark');
         menu.classList.toggle('menu-expandedDark');
-        conteudo.classList.toggle('conteudoDark')
+        conteudo.classList.toggle('conteudoDark');
+        main.classList.toggle('mainDark');
 
         menuLinks.forEach(link => {
             link.classList.toggle('menu-linkWhite');

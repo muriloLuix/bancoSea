@@ -252,6 +252,16 @@ header {
 
 /* Main Style */
 
+.main{
+    background-color: var(--verde);
+    transition: all .3s ease;
+}
+
+.mainDark{
+    background-color: var(--azul-escuro);
+    transition: all .3s ease;
+}
+
 .bodyWhite {
     background-color: #ffffff;
     position: relative;
@@ -285,6 +295,8 @@ header {
     align-items: center;
     text-align: center;
     position: relative;
+    transition: all .3s ease;
+
 }
 
 .greenBgDark {
@@ -308,6 +320,7 @@ header {
     border-top: 1px solid #fff;
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
+    transition: all .3s ease;
 }
 
 @keyframes moveToTop {
@@ -449,6 +462,7 @@ header {
     min-height: 100vh;
     background-color: var(--verde);
     transition: all .3s ease;
+    margin-top: 15%;
 }
 
 .conteudoDark {
@@ -458,4 +472,20 @@ header {
     transition: all .3s ease;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
+}
+
+.sobre{
+    width: 35%;
+    height: 40%;
+    background-color: var(--verde-mais-escuro);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: #fff;
+    padding: 100px;
+    font-family: "Montserrat";
+    text-align: justify;
+}
+
+.sobre h1{
+    margin: 0;
 }
