@@ -8,6 +8,7 @@
     <script src="assets/js/index.js" type="module" defer></script>
     <script src="assets/js/switchTheme.js" defer></script>
     <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <title> | Banco Sea</title>
 </head>
 
@@ -21,7 +22,7 @@
             <div class="menu-expanded">
                 <ul>
                     <li><a class="menu-link" href="#">Início </a></li>
-                    <li><a class="menu-link" href="#">Sobre</a></li>
+                    <li><a class="menu-link" href="#sobre">Sobre</a></li>
                     <li><a class="menu-link" href="#">Serviços</a></li>
                     <li><a class="menu-link" href="#">Cadastro</a></li>
                 </ul>
@@ -46,13 +47,40 @@
                 <img src="assets/img/mulherOlhandoPraTela.png" alt="Foto Mulher">
             </div>
         </section>
-        <section class="conteudo">
-            <div class="sobre">
-                <h1>Bem-vindo ao bancoSea, onde inovação, confiança e compromisso com você são as nossas maiores
-                    prioridades. Com uma trajetória sólida e uma visão voltada para o futuro, estamos redefinindo o
-                    conceito de serviços financeiros no Brasil.</h1>
+        <section class="conteudo" id="sobre">
+            <div class="sobre left" data-aos="fade-right">
+                <h1>Conheça o Banco Sea</h1>
+                <p>Inovação, confiança e compromisso com você são as nossas maiores prioridades. Com uma trajetória sólida e uma visão voltada para o futuro, estamos redefinindo o conceito de serviços financeiros no Brasil.</p>
+            </div>
+            <div class="sobre right" data-aos="fade-left">
+                <h1>Nossa Missão</h1>
+                <p>Desde a nossa fundação, temos nos dedicado a fornecer serviços bancários de alta qualidade, combinando tecnologia de ponta com um atendimento personalizado. Nosso objetivo é criar soluções financeiras que atendam às necessidades de todos os nossos clientes, desde indivíduos até grandes empresas.</p>
+            </div>
+            <div class="sobre left" data-aos="fade-right">
+                <h1>Compromisso Social</h1>
+                <p>Em bancoSea, acreditamos na importância da sustentabilidade e responsabilidade social. Estamos comprometidos em apoiar iniciativas que promovam o desenvolvimento econômico e social das comunidades onde atuamos. Nossa abordagem inovadora e ética nos permite oferecer produtos e serviços que não apenas beneficiam nossos clientes, mas também contribuem para um futuro melhor.</p>
+            </div>
+            <div class="sobre right" data-aos="fade-left">
+                <h1>Junte-se a Nós</h1>
+                <p>Junte-se a nós e descubra como o bancoSea pode ajudá-lo a alcançar seus objetivos financeiros. Seja através de nossas contas digitais, empréstimos, investimentos ou consultoria financeira, estamos aqui para fornecer o suporte que você precisa para prosperar.</p>
+            </div>
+            <div class="sobre left" data-aos="fade-right">
+                <h1>Inovação Contínua</h1>
+                <p>Estamos sempre evoluindo e nos adaptando às novas demandas do mercado. Nossa equipe de especialistas está constantemente trabalhando para desenvolver novas soluções e aprimorar nossos serviços, garantindo que você sempre tenha acesso ao que há de melhor no mundo financeiro.</p>
             </div>
         </section>
+        
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1200,
+                easing: 'ease-in-out',
+                once: false,
+                mirror: true
+            });
+        </script>
+        
+        
     </main>
     <footer>
 

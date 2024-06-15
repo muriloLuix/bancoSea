@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -216,15 +217,12 @@ header {
 
 .toggle-ball::before {
     background-color: #333;
-    /* Cor do sol */
     box-shadow: 0 0 10px #333, 0 0 20px #333, 0 0 30px #333;
-    /* Efeito de brilho */
     opacity: 0;
 }
 
 .toggle-ball::after {
-    background-color: yellow;
-    /* Cor da lua */
+    background-color: #ffff00;
     border-radius: 50%;
     opacity: 1;
 }
@@ -457,35 +455,112 @@ header {
 
 /* Conteudo Style */
 
+
 .conteudo {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--verde);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
     transition: all .3s ease;
-    margin-top: 15%;
+    overflow: hidden;
+    margin-top: 8%;
 }
 
 .conteudoDark {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #22577a;
-    transition: all .3s ease;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
 }
 
-.sobre{
-    width: 35%;
-    height: 40%;
-    background-color: var(--verde-mais-escuro);
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+.sobre {
+    width: 80%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
     color: #fff;
-    padding: 100px;
-    font-family: "Montserrat";
+    padding: 40px;
+    margin: 20px 0;
+    font-family: "Montserrat", sans-serif;
     text-align: justify;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateX(0);
 }
 
-.sobre h1{
-    margin: 0;
+.left {
+    align-self: flex-start;
+    margin-left: 0;
+}
+
+.right {
+    align-self: flex-end;
+    margin-right: 0;
+}
+
+.sobre[data-aos] {
+    opacity: 0;
+}
+
+.sobre[data-aos][data-aos-animate] {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.sobre.left[data-aos][data-aos-animate] {
+    transform: translateX(-5%);
+}
+
+.sobre.right[data-aos][data-aos-animate] {
+    transform: translateX(5%);
+}
+
+.sobre h1 {
+    margin: 0 0 20px;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sobre p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
