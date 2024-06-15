@@ -1,90 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/index.js" type="module" defer></script>
     <script src="assets/js/switchTheme.js" defer></script>
-    <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <title> | Banco Sea</title>
-</head>
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>| Banco Sea</title>
+  </head>
 
-<body class="bodyWhite">
+  <body class="bodyWhite">
     <header>
-        <div class="container">
-            <div class="hamburguer-menu">
-                <span class="line first-line"></span>
-                <span class="line second-line"></span>
-            </div>
-            <div class="menu-expanded">
-                <ul>
-                    <li><a class="menu-link" href="#">Início </a></li>
-                    <li><a class="menu-link" href="#sobre">Sobre</a></li>
-                    <li><a class="menu-link" href="#">Serviços</a></li>
-                    <li><a class="menu-link" href="#">Cadastro</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="hamburguer-menu">
+          <span class="line first-line"></span>
+          <span class="line second-line"></span>
         </div>
-        <div class="toggle-switch" onclick="switchTheme()">
-            <input type="checkbox" id="colorToggle" class="toggle-input">
-            <label for="colorToggle" class="toggle-label">
-                <span class="toggle-ball"></span>
-            </label>
+        <div class="menu-expanded">
+          <ul>
+            <li><a class="menu-link" href="#">Início </a></li>
+            <li><a class="menu-link" href="#sobre">Sobre</a></li>
+            <li><a class="menu-link" href="#services">Serviços</a></li>
+            <li><a class="menu-link" href="#">Cadastro</a></li>
+          </ul>
         </div>
-
+      </div>
+      <div class="toggle-switch" onclick="switchTheme()">
+        <input type="checkbox" id="colorToggle" class="toggle-input" />
+        <label for="colorToggle" class="toggle-label">
+          <span class="toggle-ball"></span>
+        </label>
+      </div>
     </header>
 
     <main class="main">
-        <section class="greenBg">
-            <div class="texts">
-                <h1>SEJA BEM VINDO AO BANCO SEA</h1>
-                <p>Venha navegar por esse mundo de emoções!</p>
+      <section class="greenBg">
+        <div class="texts">
+          <h1>SEJA BEM VINDO AO BANCO SEA</h1>
+          <p>Venha navegar por esse mundo de emoções!</p>
+        </div>
+        <div class="imgPessoa">
+          <img src="assets/img/mulherOlhandoPraTela.png" alt="Foto Mulher" />
+        </div>
+      </section>
+      <section class="conteudo" id="sobre">
+        <div class="sobre left" data-aos="fade-right">
+          <h1>Conheça o Banco Sea</h1>
+          <p>
+            Inovação, confiança e compromisso com você são as nossas maiores
+            prioridades. Com uma trajetória sólida e uma visão voltada para o
+            futuro, estamos redefinindo o conceito de serviços financeiros no
+            Brasil.
+          </p>
+        </div>
+        <div class="sobre right" data-aos="fade-left">
+          <h1>Nossa Missão</h1>
+          <p>
+            Desde a nossa fundação, temos nos dedicado a fornecer serviços
+            bancários de alta qualidade, combinando tecnologia de ponta com um
+            atendimento personalizado. Nosso objetivo é criar soluções
+            financeiras que atendam às necessidades de todos os nossos clientes,
+            desde indivíduos até grandes empresas.
+          </p>
+        </div>
+        <div class="sobre left" data-aos="fade-right">
+          <h1>Compromisso Social</h1>
+          <p>
+            Em bancoSea, acreditamos na importância da sustentabilidade e
+            responsabilidade social. Estamos comprometidos em apoiar iniciativas
+            que promovam o desenvolvimento econômico e social das comunidades
+            onde atuamos. Nossa abordagem inovadora e ética nos permite oferecer
+            produtos e serviços que não apenas beneficiam nossos clientes, mas
+            também contribuem para um futuro melhor.
+          </p>
+        </div>
+        <div class="sobre right" data-aos="fade-left">
+          <h1>Junte-se a Nós</h1>
+          <p>
+            Junte-se a nós e descubra como o bancoSea pode ajudá-lo a alcançar
+            seus objetivos financeiros. Seja através de nossas contas digitais,
+            empréstimos, investimentos ou consultoria financeira, estamos aqui
+            para fornecer o suporte que você precisa para prosperar.
+          </p>
+        </div>
+        <div class="sobre left" data-aos="fade-right">
+          <h1>Inovação Contínua</h1>
+          <p>
+            Estamos sempre evoluindo e nos adaptando às novas demandas do
+            mercado. Nossa equipe de especialistas está constantemente
+            trabalhando para desenvolver novas soluções e aprimorar nossos
+            serviços, garantindo que você sempre tenha acesso ao que há de
+            melhor no mundo financeiro.
+          </p>
+        </div>
+        <div class="waveWrapper waveAnimation">
+          <div class="waveWrapperInner bgTop">
+            <div
+              class="wave waveTop"
+              style="
+                background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png');
+              "
+            ></div>
+          </div>
+          <div class="waveWrapperInner bgMiddle">
+            <div
+              class="wave waveMiddle"
+              style="
+                background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');
+              "
+            ></div>
+          </div>
+          <div class="waveWrapperInner bgBottom">
+            <div
+              class="wave waveBottom"
+              style="
+                background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png');
+              "
+            ></div>
+          </div>
+        </div>
+        <div class="waveWrapper waveAnimation inverted">
+          <div class="waveWrapperInner bgTop">
+            <div
+              class="wave waveTop"
+              style="
+                background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png');
+              "
+            ></div>
+          </div>
+          <div class="waveWrapperInner bgMiddle">
+            <div
+              class="wave waveMiddle"
+              style="
+                background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');
+              "
+            ></div>
+          </div>
+          <div class="waveWrapperInner bgBottom">
+            <div
+              class="wave waveBottom"
+              style="
+                background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png');
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+      <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 1200,
+          easing: "ease-in-out",
+          once: false,
+          mirror: true,
+        });
+      </script>
+      <section class="services" id="services">
+        <div class="title">
+          <h2>Serviços</h2>
+        </div>
+        <div class="wrapper">
+          <div class="panel animated slideInDown">
+            <img src="assets/img/consumidor.png" alt="Consumidor" />
+            <h3>Proteção ao Consumidor</h3>
+            <p>
+              Proteja os direitos e interesses dos consumidores, oferecendo
+              assistência jurídica, resolução de disputas e educação sobre
+              direitos do consumidor.
+            </p>
+            <div class="slide">
+              <h4>Benefícios</h4>
+              <ul>
+                <li>Estratégia e planejamento do projeto</li>
+                <li>Sistemas de gerenciamento de conteúdo</li>
+                <li>Marketing por e-mail</li>
+                <li>Desenvolvimento de aplicativos móveis</li>
+                <li>Testes de usabilidade</li>
+                <li>Desenvolvimento responsivo</li>
+                <li>Manutenção programada</li>
+                <li>Soluções de comércio eletrônico</li>
+              </ul>
             </div>
-            <div class="imgPessoa">
-                <img src="assets/img/mulherOlhandoPraTela.png" alt="Foto Mulher">
+          </div>
+          <div class="panel animated slideInDown">
+            <img src="assets/img/cartao-de-credito.png" alt="Cartão" />
+            <h3>Cartão Black</h3>
+            <p>
+              Acesso a benefícios exclusivos e serviços premium para titulares
+              do cartão.
+            </p>
+            <div class="slide">
+              <h4>Benefícios</h4>
+              <ul>
+                <li>Estratégia e planejamento do projeto</li>
+                <li>Sistemas de gerenciamento de conteúdo</li>
+                <li>Marketing por e-mail</li>
+                <li>Desenvolvimento de aplicativos móveis</li>
+                <li>Testes de usabilidade</li>
+                <li>Desenvolvimento responsivo</li>
+                <li>Manutenção programada</li>
+                <li>Soluções de comércio eletrônico</li>
+              </ul>
             </div>
-        </section>
-        <section class="conteudo" id="sobre">
-            <div class="sobre left" data-aos="fade-right">
-                <h1>Conheça o Banco Sea</h1>
-                <p>Inovação, confiança e compromisso com você são as nossas maiores prioridades. Com uma trajetória sólida e uma visão voltada para o futuro, estamos redefinindo o conceito de serviços financeiros no Brasil.</p>
+          </div>
+          <div class="panel animated slideInDown">
+            <img src="assets/img/mercado-de-acoes.png" alt="Ações Rentáveis" />
+            <h3>Ações Rentáveis</h3>
+            <p>
+              Estratégias para aumentar a rentabilidade de negócios online,
+              incluindo marketing digital e otimização de mecanismos de
+              pesquisa.
+            </p>
+            <div class="slide">
+              <h4>Benefícios</h4>
+              <ul>
+                <li>Otimização de código para melhor desempenho</li>
+                <li>Construção de links para melhorar a visibilidade</li>
+                <li>Marketing móvel para alcance eficaz</li>
+                <li>Criação de páginas de destino eficazes</li>
+                <li>Otimização de pagamento por clique</li>
+                <li>SEO local para alcance geográfico específico</li>
+              </ul>
             </div>
-            <div class="sobre right" data-aos="fade-left">
-                <h1>Nossa Missão</h1>
-                <p>Desde a nossa fundação, temos nos dedicado a fornecer serviços bancários de alta qualidade, combinando tecnologia de ponta com um atendimento personalizado. Nosso objetivo é criar soluções financeiras que atendam às necessidades de todos os nossos clientes, desde indivíduos até grandes empresas.</p>
-            </div>
-            <div class="sobre left" data-aos="fade-right">
-                <h1>Compromisso Social</h1>
-                <p>Em bancoSea, acreditamos na importância da sustentabilidade e responsabilidade social. Estamos comprometidos em apoiar iniciativas que promovam o desenvolvimento econômico e social das comunidades onde atuamos. Nossa abordagem inovadora e ética nos permite oferecer produtos e serviços que não apenas beneficiam nossos clientes, mas também contribuem para um futuro melhor.</p>
-            </div>
-            <div class="sobre right" data-aos="fade-left">
-                <h1>Junte-se a Nós</h1>
-                <p>Junte-se a nós e descubra como o bancoSea pode ajudá-lo a alcançar seus objetivos financeiros. Seja através de nossas contas digitais, empréstimos, investimentos ou consultoria financeira, estamos aqui para fornecer o suporte que você precisa para prosperar.</p>
-            </div>
-            <div class="sobre left" data-aos="fade-right">
-                <h1>Inovação Contínua</h1>
-                <p>Estamos sempre evoluindo e nos adaptando às novas demandas do mercado. Nossa equipe de especialistas está constantemente trabalhando para desenvolver novas soluções e aprimorar nossos serviços, garantindo que você sempre tenha acesso ao que há de melhor no mundo financeiro.</p>
-            </div>
-        </section>
-        
-        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1200,
-                easing: 'ease-in-out',
-                once: false,
-                mirror: true
-            });
-        </script>
-        
-        
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-
-    </footer>
-</body>
-
+    <footer></footer>
+  </body>
 </html>
