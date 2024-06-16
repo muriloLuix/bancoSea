@@ -807,6 +807,14 @@ body[data-aos-duration="1200"] [data-aos] {
   text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  .panel {
+    width: calc(100% - 40px);
+  }
+}
+
+/* Footer Style */
+
 .footer {
   display: flex;
   align-items: center;
