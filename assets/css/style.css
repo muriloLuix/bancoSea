@@ -12,7 +12,14 @@
   scroll-behavior: smooth;
 }
 
+/* Desabilita o foco para todos os elementos exceto input e textarea */
+body *:not(input):not(textarea) {
+  user-select: none;
+  outline: none;
+}
+
 :root {
+  --azul-claro: #42a5e7;
   --azul-escuro: #22577a;
   --azul-escuro-mais: #122f42;
   --verde-mais-escuro: #38a3a5;
@@ -306,9 +313,6 @@ header {
   align-items: center;
   text-align: center;
   position: relative;
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-left: 1px solid #fff;
   transition: all 0.3s ease;
 }
 
@@ -327,10 +331,6 @@ header {
     bottom: 0;
     opacity: 1;
   }
-}
-
-.texts {
-  margin-right: 70px;
 }
 
 .imgPessoa {
@@ -410,6 +410,24 @@ header {
   }
 }
 
+@media (max-width: 756px) {
+  .imgPessoa {
+    left: 150px;
+  }
+}
+
+@media (max-width: 659px) {
+  .imgPessoa {
+    left: 100px;
+  }
+}
+
+@media (max-width: 498px) {
+  .imgPessoa {
+    display: none;
+  }
+}
+
 .greenBg h1 {
   font-family: "Kanit";
   letter-spacing: 2px;
@@ -456,8 +474,6 @@ header {
 }
 
 .conteudoDark {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
   background-color: var(--azul-escuro);
 }
 
@@ -644,6 +660,12 @@ body[data-aos-duration="1200"] [data-aos] {
   font-family: "Montserrat";
 }
 
+.servicesDark {
+  background-color: var(--azul-escuro);
+  transition: background-color 0.3s ease;
+  font-family: "Montserrat";
+}
+
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -666,6 +688,18 @@ body[data-aos-duration="1200"] [data-aos] {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
+.panelDark {
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  width: calc(33.333% - 40px);
+  height: 400px;
+  background-color: var(--azul-escuro-mais);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
 .panel:hover {
   transform: translateY(-10px);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
@@ -678,7 +712,7 @@ body[data-aos-duration="1200"] [data-aos] {
   display: block;
 }
 
-.panel h3 {
+.panel .titlePanel {
   font-size: 24px;
   font-weight: bold;
   color: #449858;
@@ -687,9 +721,26 @@ body[data-aos-duration="1200"] [data-aos] {
   text-align: center;
 }
 
-.panel p {
+.panel .titlePanelWhite {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--azul-claro);
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.panel .paragrafPanel {
   font-size: 16px;
   color: #555;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+  text-align: justify;
+}
+
+.panel .paragrafPanelWhite {
+  font-size: 16px;
+  color: #ffffff;
   margin-bottom: 20px;
   transition: color 0.3s ease;
   text-align: justify;
@@ -738,14 +789,94 @@ body[data-aos-duration="1200"] [data-aos] {
 }
 
 .title {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title h2 {
+  font-size: 32px;
+  color: #449858;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.titleDark h2 {
+  font-size: 32px;
+  color: var(--azul-escuro-mais);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--verde-claro);
+  font-size: 14px;
+  font-weight: normal;
+  padding: 1em 1em 0 1em;
+  width: 100%;
+  color: #aaa;
+  transition: all 0.3s ease;
+}
+
+.footerDark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--azul-escuro);
+  font-size: 14px;
+  font-weight: normal;
+  padding: 1em 1em 0 1em;
+  width: 100%;
+  color: #aaa;
+  transition: all 0.3s ease;
+}
+.footer .wunder-logo {
+  vertical-align: text-bottom;
+  width: 90px;
+}
+
+.footer .social-icons {
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  font-size: 24px;
+  color: var(--azul-escuro-mais);
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #4183c4;
+  transform: scale(1.2);
+}
+
+.footer .container-fluid {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.footer .social-icons i {
+  transition: color 0.3s ease;
+}
+
+@media screen and (max-width: 894px) {
+  .greenBg h1{
+    font-size: 2.5rem;
   }
-  
-  .title h2 {
-    font-size: 32px;
-    color: #449858;
-    font-weight: bold;
-    text-transform: uppercase;
+}
+
+@media screen and (max-width: 773px) {
+  .greenBg h1{
+    font-size: 2rem;
   }
-  
+}
+
+@media screen and (max-width: 653px) {
+  .greenBg h1{
+    font-size: 1.5rem;
+  }
+}
