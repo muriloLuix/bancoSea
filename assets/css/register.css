@@ -57,11 +57,13 @@ body *:not(input):not(textarea) {
   padding: 0 10px;
   transition: all 0.3s ease;
 }
+
 .bodyDark {
   background: var(--azul-escuro);
   padding: 0 10px;
   transition: all 0.3s ease;
 }
+
 .wrapper {
   max-width: 500px;
   width: 100%;
@@ -187,6 +189,7 @@ body *:not(input):not(textarea) {
   font-size: 14px;
   color: #757575;
 }
+
 .wrapper .form .inputfield .check {
   width: 15px;
   height: 15px;
@@ -194,12 +197,14 @@ body *:not(input):not(textarea) {
   display: block;
   cursor: pointer;
 }
+
 .wrapper .form .inputfield .check input[type="checkbox"] {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
+
 .wrapper .form .inputfield .check .checkmark {
   width: 15px;
   height: 15px;
@@ -223,6 +228,7 @@ body *:not(input):not(textarea) {
   display: block;
   position: relative;
 }
+
 .wrapper .form .inputfield .check .checkmark:before {
   content: "";
   position: absolute;
@@ -235,29 +241,20 @@ body *:not(input):not(textarea) {
   transform: rotate(-45deg);
   display: none;
 }
-.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark {
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmark {
   background: var(--verde-claro);
 }
 
-.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmarkDark {
+.wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmarkDark {
   background: var(--azul-escuro);
 }
 
-.wrapper
-  .form
-  .inputfield
-  .check
-  input[type="checkbox"]:checked
-  ~ .checkmark:before {
+.wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmark:before {
   display: block;
 }
 
-.wrapper
-  .form
-  .inputfield
-  .check
-  input[type="checkbox"]:checked
-  ~ .checkmarkDark:before {
+.wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmarkDark:before {
   display: block;
 }
 
@@ -363,29 +360,125 @@ body *:not(input):not(textarea) {
   opacity: 1;
 }
 
-.toggle-input:checked + .toggle-label {
+.toggle-input:checked+.toggle-label {
   background-color: var(--azul-escuro-mais);
 }
 
-.toggle-input:checked + .toggle-label .toggle-ball {
+.toggle-input:checked+.toggle-label .toggle-ball {
   transform: translateX(30px);
 }
 
-.toggle-input:checked + .toggle-label .toggle-ball::before {
+.toggle-input:checked+.toggle-label .toggle-ball::before {
   opacity: 1;
 }
 
-.toggle-input:checked + .toggle-label .toggle-ball::after {
+.toggle-input:checked+.toggle-label .toggle-ball::after {
   opacity: 0;
 }
+
+.subTitle {
+  width: 100%;
+  color: #757575;
+  margin-right: 10px;
+  font-size: 14px;
+  text-align: justify;
+  transition: all .3s ease;
+  padding-bottom: 8%;
+}
+
+.subTitleWhite {
+  color: #ffffff;
+}
+
+.custom-file-input {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--verde-claro);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-inputDark {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--azul-escuro);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-inputDark:hover {
+  background-color: var(--azul-claro);
+}
+
+.custom-file-input input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 @media (max-width: 420px) {
   .wrapper .form .inputfield {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .wrapper .form .inputfield .labelInput {
     margin-bottom: 5px;
   }
+
   .wrapper .form .inputfield.terms {
     flex-direction: row;
   }
