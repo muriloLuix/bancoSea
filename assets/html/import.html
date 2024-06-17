@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../js/switchThemeImport.js" defer></script>
+    <script src="../js/modal.js" defer></script>
     <link rel="stylesheet" href="../css/register.css">
     <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
     <title> | Importe seu arquivo</title>
@@ -25,7 +27,7 @@
             geradas na tela de cadastro.
         </div>
         <div class="form">
-            <form action="../php/import.php" method="post" enctype="multipart/form-data">
+            <form enctype="multipart/form-data" id="form-import">
                 <div class="inputfield">
                     <label class="labelInput">Anexe seu arquivo</label>
                     <input type="file" name="file" required accept=".txt" />
@@ -36,7 +38,11 @@
             </form>
 
         </div>
+
+        <div id="resultado-importacao"></div>
+
     </div>
+</body>
 </body>
 
 </html>
