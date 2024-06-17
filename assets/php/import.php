@@ -11,7 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         $file_content = file_get_contents($file_tmp_name);
-        $data = explode('|', $file_content);
+        $data = list($first_name, $last_name, $genero, $email, $fone, $address, $codigo_postal) = explode('|', $file_content);
+
 
         $dados = [
             "primeiro_nome" => $data[0],
