@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/cellphone.js" defer></script>
+    <script src="../js/timer.js" defer></script>
+    <script src="../js/confirmation.js" defer></script>
+    <script src="../js/switchThemeRegister.js" defer></script>
     <link rel="stylesheet" href="../css/register.css" />
     <link
       rel="shortcut icon"
@@ -11,63 +15,124 @@
     />
     <title>| Realize seu cadastro!</title>
   </head>
-  <body>
+  <body class="bodyWhite">
     <div class="wrapper">
+      <div class="toggle-switch" onclick="switchThemeRegister()">
+        <input type="checkbox" id="colorToggle" class="toggle-input" />
+        <label for="colorToggle" class="toggle-label">
+          <span class="toggle-ball"></span>
+        </label>
+      </div>
       <div class="title">VENHA SE TORNAR UM SEA!</div>
       <div class="form">
-        <form action="../php/export.php" method="post">
-            <div class="inputfield">
-              <label>Primeiro Nome</label>
-              <input type="text" class="input" />
+        <form action="../php/export.php" method="post" id="registerForm">
+          <div class="inputfield">
+            <label class="labelInput">Primeiro Nome</label>
+            <input
+              type="text"
+              class="input"
+              name="firstName"
+              id="firstName"
+              required
+              maxlength="40"
+            />
+          </div>
+          <div class="inputfield">
+            <label class="labelInput">Último Nome</label>
+            <input
+              type="text"
+              class="input"
+              name="lastName"
+              id="lastName"
+              required
+              maxlength="25"
+            />
+          </div>
+          <div class="inputfield">
+            <label class="labelInput">Senha</label>
+            <input
+              type="password"
+              class="input"
+              name="password"
+              id="password"
+              required
+            />
+          </div>
+          <div class="inputfield">
+            <label class="labelInput">Confirmar Senha</label>
+            <input
+              type="password"
+              class="input"
+              name="confirmPassword"
+              id="confirmPassword"
+              required
+            />
+          </div>
+          <div class="inputfield">
+            <label class="labelInput">Gênero</label>
+            <div class="custom_select">
+              <select name="gender" class="selectTag"required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+              </select>
             </div>
-            <div class="inputfield">
-              <label>Último Nome</label>
-              <input type="text" class="input" />
-            </div>
-            <div class="inputfield">
-              <label>Senha</label>
-              <input type="password" class="input" />
-            </div>
-            <div class="inputfield">
-              <label>Confirmar Senha</label>
-              <input type="password" class="input" />
-            </div>
-            <div class="inputfield">
-              <label>Gênero</label>
-              <div class="custom_select">
-                <select>
-                  <option value="" disabled selected></option>
-                  <option value="male">Masculino</option>
-                  <option value="female">Feminino</option>
-                </select>
-              </div>
-            </div>
-            <div class="inputfield">
-              <label>E-mail</label>
-              <input type="text" class="input" />
-            </div>
-            <div class="inputfield">
-              <label>Número</label>
-              <input type="text" class="input" />
-            </div>
-            <div class="inputfield">
-              <label>Endereço</label>
-              <textarea class="textarea"></textarea>
-            </div>
-            <div class="inputfield">
-              <label>Código Postal</label>
-              <input type="text" class="input" />
-            </div>
-            <div class="inputfield terms">
-              <label class="check">
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <p>Aceita os termos e condições?</p>
-            </div>
-            <div class="inputfield">
-              <input type="submit" value="Register" class="btn" />
-            </div>
+          </div>
+          <div class="inputfield">
+            <label class="labelInput">E-mail</label>
+            <input type="text" class="input" name="email" required />
+          </div>
+          <div class="inputfield">
+            <label class="labelInput">Número</label>
+            <input
+              type="text"
+              class="input"
+              name="phoneNumber"
+              id="phoneNumber"
+              required
+              maxlength="15"
+            />
+          </div>
+          <div class="inputfield">
+            <label class="labelInput">Endereço</label>
+            <input type="text" class="input" name="street" id="street" />
+          </div>
+          <div class="inputfield">
+            <label class="labelInput">Número</label>
+            <input
+              type="number"
+              class="input"
+              name="numberStreet"
+              id="numberStreet"
+            />
+          </div>
+          <div class="inputfield">
+            <label class="labelInput">Código Postal</label>
+            <input
+              type="text"
+              class="input"
+              name="postalCode"
+              id="postalCode"
+              maxlength="9"
+            />
+          </div>
+          <div class="inputfield terms">
+            <label class="check">
+              <input type="checkbox" name="terms" />
+              <span class="checkmark"></span>
+            </label>
+            <p>Aceita os termos e condições?</p>
+          </div>
+          <div class="inputfield">
+            <input
+              type="submit"
+              value="Register"
+              class="btn"
+              id="registerBtn"
+            />
+          </div>
+          <span id="passwordError" class="error-message"></span>
+          <span id="confirmPasswordError" class="error-message"></span>
         </form>
       </div>
     </div>

@@ -52,9 +52,15 @@ body *:not(input):not(textarea) {
 
 /* General Style - End */
 
-body {
+.bodyWhite {
   background: var(--verde-claro);
   padding: 0 10px;
+  transition: all 0.3s ease;
+}
+.bodyDark {
+  background: var(--azul-escuro);
+  padding: 0 10px;
+  transition: all 0.3s ease;
 }
 .wrapper {
   max-width: 500px;
@@ -64,6 +70,18 @@ body {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
   padding: 30px;
   font-family: "Montserrat";
+  transition: all .3s ease;
+}
+
+.wrapperDark {
+  max-width: 500px;
+  width: 100%;
+  background: var(--azul-escuro-mais);
+  margin: 50px auto;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+  padding: 30px;
+  font-family: "Montserrat";
+  transition: all .3s ease;
 }
 
 .wrapper .title {
@@ -71,6 +89,15 @@ body {
   font-weight: 700;
   margin-bottom: 25px;
   color: var(--verde-claro);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .titleWhite {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
 }
@@ -85,11 +112,20 @@ body {
   align-items: center;
 }
 
-.wrapper .form .inputfield label {
+.wrapper .form .inputfield .labelInput {
   width: 200px;
   color: #757575;
   margin-right: 10px;
   font-size: 14px;
+  transition: all .3s ease;
+}
+
+.wrapper .form .inputfield .labelInputWhite {
+  width: 200px;
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 14px;
+  transition: all .3s ease;
 }
 
 .wrapper .form .inputfield .input,
@@ -98,9 +134,11 @@ body {
   outline: none;
   border: 1px solid #d5dbd9;
   font-size: 15px;
+  background-color: rgb(255, 255, 255);
   padding: 8px 10px;
   border-radius: 3px;
   transition: all 0.3s ease;
+  color: #fff;
 }
 
 .wrapper .form .inputfield .textarea {
@@ -125,7 +163,7 @@ body {
   pointer-events: none;
 }
 
-.wrapper .form .inputfield .custom_select select {
+.wrapper .form .inputfield .custom_select .selectTag {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -141,7 +179,7 @@ body {
 
 .wrapper .form .inputfield .input:focus,
 .wrapper .form .inputfield .textarea:focus,
-.wrapper .form .inputfield .custom_select select:focus {
+.wrapper .form .inputfield .custom_select .selectTag:focus {
   border: 1px solid var(--verde-claro);
 }
 
@@ -169,6 +207,22 @@ body {
   display: block;
   position: relative;
 }
+
+.wrapper .form .inputfield .check .checkmark {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--verde-claro);
+  display: block;
+  position: relative;
+}
+
+.wrapper .form .inputfield .check .checkmarkDark {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--azul-escuro);
+  display: block;
+  position: relative;
+}
 .wrapper .form .inputfield .check .checkmark:before {
   content: "";
   position: absolute;
@@ -185,12 +239,25 @@ body {
   background: var(--verde-claro);
 }
 
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmarkDark {
+  background: var(--azul-escuro);
+}
+
 .wrapper
   .form
   .inputfield
   .check
   input[type="checkbox"]:checked
   ~ .checkmark:before {
+  display: block;
+}
+
+.wrapper
+  .form
+  .inputfield
+  .check
+  input[type="checkbox"]:checked
+  ~ .checkmarkDark:before {
   display: block;
 }
 
@@ -206,20 +273,117 @@ body {
   outline: none;
 }
 
+.wrapper .form .inputfield .btnDark {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background: var(--azul-escuro);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+  transition: all .3s ease;
+}
+
 .wrapper .form .inputfield .btn:hover {
   background: var(--verde-claro);
+}
+
+.wrapper .form .inputfield .btnDark:hover {
+  background: var(--azul-claro);
+  transition: all .3s ease;
 }
 
 .wrapper .form .inputfield:last-child {
   margin-bottom: 0;
 }
 
+.confirmPasswordWrong {
+  border: 1px solid #ff0000 !important;
+}
+
+.toggle-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+  z-index: 1000;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.toggle-ball {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.toggle-ball::before,
+.toggle-ball::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+}
+
+.toggle-ball::before {
+  background-color: #333;
+  box-shadow: 0 0 10px #333, 0 0 20px #333, 0 0 30px #333;
+  opacity: 0;
+}
+
+.toggle-ball::after {
+  background-color: #ffff00;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: var(--azul-escuro-mais);
+}
+
+.toggle-input:checked + .toggle-label .toggle-ball {
+  transform: translateX(30px);
+}
+
+.toggle-input:checked + .toggle-label .toggle-ball::before {
+  opacity: 1;
+}
+
+.toggle-input:checked + .toggle-label .toggle-ball::after {
+  opacity: 0;
+}
 @media (max-width: 420px) {
   .wrapper .form .inputfield {
     flex-direction: column;
     align-items: flex-start;
   }
-  .wrapper .form .inputfield label {
+  .wrapper .form .inputfield .labelInput {
     margin-bottom: 5px;
   }
   .wrapper .form .inputfield.terms {
