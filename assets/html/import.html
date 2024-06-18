@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../js/switchThemeImport.js" defer></script>
     <script src="../js/modal.js" defer></script>
-    <link rel="stylesheet" href="../css/register.css">
-    <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
-    <title> | Importe seu arquivo</title>
-</head>
-
-<body class="bodyWhite">
+    <script src="../js/archive.js" defer></script>
+    <link rel="stylesheet" href="../css/register.css" />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>| Importe seu arquivo</title>
+  </head>
+  <body class="bodyWhite">
     <div class="wrapper">
-        <div class="toggle-switch" onclick="switchThemeImport()">
-            <input type="checkbox" id="colorToggle" class="toggle-input" />
-            <label for="colorToggle" class="toggle-label">
-                <span class="toggle-ball"></span>
-            </label>
-        </div>
-        <div class="title">IMPORTE SEU CADASTRO!</div>
-        <div class="subTitle">Para economizar tempo e garantir que o <strong>Banco Sea</strong> opere de maneira
-            <strong>ágil</strong> e <strong>eficiente</strong>, preparamos um recurso de importação de arquivos! Para
-            importar seu cadastro, o arquivo deve estar separado por pipe <strong>'|'</strong> e conter as informações
-            geradas na tela de <a href="register.html">cadastro</a>.
-        </div>
-        <div class="form">
-            <form enctype="multipart/form-data" id="form-import">
-                <div class="inputfield">
-                    <label class="labelInput">Anexe seu arquivo</label>
-                    <input type="file" name="file" required accept=".txt" />
-                </div>
-                <div class="inputfield">
-                    <input type="submit" value="Importar Cadastro" class="btn" />
-                </div>
-            </form>
-
-        </div>
-
-        <div id="resultado-importacao"></div>
-
+      <div class="toggle-switch" onclick="switchThemeImport()">
+        <input type="checkbox" id="colorToggle" class="toggle-input" />
+        <label for="colorToggle" class="toggle-label">
+          <span class="toggle-ball"></span>
+        </label>
+      </div>
+      <div class="container">
+        <a href="../../index.html" class="arrow-link">&#8592;</a>
+        <div class="title">VENHA SE TORNAR UM SEA!</div>
+      </div>
+      <div class="subTitle">
+        Para economizar tempo e garantir que o <strong>Banco Sea</strong> opere
+        de maneira <strong>ágil</strong> e <strong>eficiente</strong>,
+        preparamos um recurso de importação de arquivos! Para importar seu
+        cadastro, o arquivo deve estar separado por pipe <strong>'|'</strong> e
+        conter as informações geradas na tela de
+        <a href="register.html">cadastro</a>.
+      </div>
+      <div class="form">
+        <form enctype="multipart/form-data" id="form-import">
+          <div class="inputfield">
+            <label class="labelInput">Anexe seu arquivo</label>
+            <label class="custom-file-label">Escolher arquivo</label>
+            <input
+              type="file"
+              id="fileInput"
+              name="file"
+              required
+              accept=".txt"
+            />
+            <div class="file-info" id="fileInfo"></div>
+          </div>
+          <div class="inputfield">
+            <input type="submit" value="Importar Cadastro" class="btn" />
+          </div>
+        </form>
+      </div>
+      <div id="resultado-importacao"></div>
     </div>
-</body>
-</body>
-
+  </body>
 </html>

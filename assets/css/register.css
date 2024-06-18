@@ -72,7 +72,7 @@ body *:not(input):not(textarea) {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
   padding: 30px;
   font-family: "Montserrat";
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .wrapperDark {
@@ -83,7 +83,7 @@ body *:not(input):not(textarea) {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
   padding: 30px;
   font-family: "Montserrat";
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .wrapper .title {
@@ -119,7 +119,37 @@ body *:not(input):not(textarea) {
   color: #757575;
   margin-right: 10px;
   font-size: 14px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
+}
+
+.inputfield input[type="file"] {
+  display: none;
+}
+
+.custom-file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.custom-file-label:hover {
+  background-color: #0056b3;
+}
+
+.labelInput {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.file-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green;
 }
 
 .wrapper .form .inputfield .labelInputWhite {
@@ -127,7 +157,7 @@ body *:not(input):not(textarea) {
   color: #ffffff;
   margin-right: 10px;
   font-size: 14px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .wrapper .form .inputfield .input,
@@ -242,19 +272,34 @@ body *:not(input):not(textarea) {
   display: none;
 }
 
-.wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmark {
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark {
   background: var(--verde-claro);
 }
 
-.wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmarkDark {
+.wrapper
+  .form
+  .inputfield
+  .check
+  input[type="checkbox"]:checked
+  ~ .checkmarkDark {
   background: var(--azul-escuro);
 }
 
-.wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmark:before {
+.wrapper
+  .form
+  .inputfield
+  .check
+  input[type="checkbox"]:checked
+  ~ .checkmark:before {
   display: block;
 }
 
-.wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmarkDark:before {
+.wrapper
+  .form
+  .inputfield
+  .check
+  input[type="checkbox"]:checked
+  ~ .checkmarkDark:before {
   display: block;
 }
 
@@ -280,7 +325,7 @@ body *:not(input):not(textarea) {
   cursor: pointer;
   border-radius: 3px;
   outline: none;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .wrapper .form .inputfield .btn:hover {
@@ -289,7 +334,7 @@ body *:not(input):not(textarea) {
 
 .wrapper .form .inputfield .btnDark:hover {
   background: var(--azul-claro);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .wrapper .form .inputfield:last-child {
@@ -360,19 +405,19 @@ body *:not(input):not(textarea) {
   opacity: 1;
 }
 
-.toggle-input:checked+.toggle-label {
+.toggle-input:checked + .toggle-label {
   background-color: var(--azul-escuro-mais);
 }
 
-.toggle-input:checked+.toggle-label .toggle-ball {
+.toggle-input:checked + .toggle-label .toggle-ball {
   transform: translateX(30px);
 }
 
-.toggle-input:checked+.toggle-label .toggle-ball::before {
+.toggle-input:checked + .toggle-label .toggle-ball::before {
   opacity: 1;
 }
 
-.toggle-input:checked+.toggle-label .toggle-ball::after {
+.toggle-input:checked + .toggle-label .toggle-ball::after {
   opacity: 0;
 }
 
@@ -382,77 +427,38 @@ body *:not(input):not(textarea) {
   margin-right: 10px;
   font-size: 14px;
   text-align: justify;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   padding-bottom: 8%;
 }
 
-.subTitle a{
+.subTitle a {
   text-decoration: none !important;
+  color: var(--azul-claro);
 }
 
 .subTitleWhite {
   color: #ffffff;
 }
 
-.custom-file-input {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  background-color: var(--verde-claro);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.custom-file-inputDark {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  background-color: var(--azul-escuro);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.custom-file-inputDark:hover {
-  background-color: var(--azul-claro);
-}
-
-.custom-file-input input[type="file"] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
 .modal {
   display: none;
   position: fixed;
-  z-index: 1; 
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4);
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; 
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 80%;
 }
 
 /* Close Button */
@@ -470,7 +476,48 @@ body *:not(input):not(textarea) {
   cursor: pointer;
 }
 
+.import-title {
+  font-size: 20px;
+  color: var(--verde-claro) !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.import-item {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.import-itemLight {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.import-item strong {
+  color: #000;
+}
+
+.arrow-link {
+  font-size: 32px; 
+  text-decoration: none;
+  margin-right: 15px;
+  color: var(--verde-claro); 
+  transition: color 0.3s, transform 0.3s; 
+}
+
+.arrow-link:hover {
+  color: darkblue;
+  transform: translateX(-5px);
+}
+
+.title {
+  font-size: 28px; 
+  font-weight: bold;
+  color: #333;
+}
 
 
 @media (max-width: 420px) {
